@@ -1,5 +1,9 @@
 # a string tem de estar ordenada
 def isIn(char, aStr):
+    aStr = str(aStr)
+    aStr = aStr.lower()
+    aStr = ''.join(sorted(aStr))
+
     tamanho = len(aStr)
     if tamanho == 0:
         return False
@@ -17,7 +21,7 @@ def isIn(char, aStr):
         else:
             return isIn(char, aStr[(meio + 1):tamanho])
 
-print(isIn('a','bola'))
+print(isIn('a','Bola'))
 print(isIn('a','LOL'))
-print(isIn('a','how do you turn this on?'))
-print(isIn('a','my last thoughts are of unbearable pain'))
+print(isIn('a','How do you turn this on?'))
+print(isIn('a','My last thoughts are of unbearable pain'))
